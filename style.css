@@ -22,7 +22,7 @@ html,body{height: 100%; margin: 0;}
     --site-link-color: #117cff;
     /* --site-link-color: #3773FF; */
     --site-visited-color: #b377f2;
-    --hover-link-color: #ddad34;
+    --hover-link-color: #ffc636;
     --gap-size: 1.5em;
     --border-size: 4px;
 }
@@ -67,21 +67,6 @@ main{
     gap: var(--gap-size);
     flex-direction: column;
 }
-form.book-form{
-    box-sizing: border-box;
-    display: grid;
-    grid-template-areas: 
-    /* "add-heading add-heading" */
-    "title author"
-    "pages submit";
-    gap: var(--gap-size);
-
-    padding: 2em;
-    /* border-width: var(--border-size); */
-    border: solid var(--site-text-color);
-    border-radius: 0.5em;
-    font-size: 18px; 
-}
 form.book-form input:hover{
     transition: .3s ease;
 }
@@ -92,23 +77,36 @@ form.book-form input:hover{
 form.book-form input:focus{
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-.add-book-heading{
-    grid-area: add-heading;
-    text-decoration: underline;
+form.book-form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: var(--gap-size);
+
+    padding: 2em;
+    border: solid var(--site-text-color);
+    border-radius: 0.5em;
+    font-size: 18px; 
 }
-.title-container{
-    grid-area: title;
+.read-submit-container{
+    display: grid;
+    grid-template-columns: .5fr 1fr;
 }
-.author-container{
-    grid-area: author;
-}
-.pages-container{
-    grid-area: pages;
+.read-container{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    /* width: 50%; */
 }
 .submit-container{
-    grid-area: submit;
+    display: flex;
+    align-items: center;
 }
-form > div > input{
+input[type="checkbox"]{
+    transform: scale(1.5);
+}
+
+form > div > input, .submit-container input[type="submit"]{
     border-radius: 0.5em;
     border-style: solid;
     border-color: var(--site-link-color);

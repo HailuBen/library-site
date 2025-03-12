@@ -1,0 +1,146 @@
+/* Josh's Custom CSS Reset https://www.joshwcomeau.com/css/custom-css-reset/ */
+*,::before,::after{box-sizing:border-box}*{margin:0}body{line-height:1.5;-webkit-font-smoothing:antialiased}img,picture,video,canvas,svg{display:block;max-width:100%}input,button,textarea,select{font:inherit}p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}#root,#__next{isolation:isolate}
+html,body{height: 100%; margin: 0;}
+
+.ponomar-regular {
+    font-family: "Ponomar", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-slab-awesome{
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+:root{
+    /* Palette */
+    --site-bg-color: #3c3c3c;
+    --site-text-color: #dcdcdc;
+    --site-link-color: #117cff;
+    /* --site-link-color: #3773FF; */
+    --site-visited-color: #b377f2;
+    --hover-link-color: #ddad34;
+    --gap-size: 1.5em;
+    --border-size: 4px;
+}
+
+a{
+    transition: .3s ease;
+}
+a:link{
+    color: var(--site-link-color);
+}
+a:visited{
+    color: var(--site-visited-color);
+}
+a:hover{
+    color: var(--hover-link-color);
+}
+
+body{
+    background-color: var(--site-bg-color);
+    color: var(--site-text-color);
+    /* font-family: "Ponomar", system-ui; */
+    font-family: "Roboto Slab", serif;
+}
+header{
+    display: flex;
+    height: 3em;
+    background-color: #b377f2;
+    background-color: var(--site-link-color);
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav h2 span{
+    color: var(--hover-link-color);
+}
+
+main{
+    padding: var(--gap-size);
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-size);
+    flex-direction: column;
+}
+form.book-form{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: 
+    /* "add-heading add-heading" */
+    "title author"
+    "pages submit";
+    gap: var(--gap-size);
+
+    padding: 2em;
+    /* border-width: var(--border-size); */
+    border: solid var(--site-text-color);
+    border-radius: 0.5em;
+    font-size: 18px; 
+}
+form.book-form input:hover{
+    transition: .3s ease;
+}
+form.book-form input:hover{
+    box-shadow: 0 6px 12px #b377f2, 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0px 0px 5px 2px var(--site-link-color);
+}
+form.book-form input:focus{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.add-book-heading{
+    grid-area: add-heading;
+    text-decoration: underline;
+}
+.title-container{
+    grid-area: title;
+}
+.author-container{
+    grid-area: author;
+}
+.pages-container{
+    grid-area: pages;
+}
+.submit-container{
+    grid-area: submit;
+}
+form > div > input{
+    border-radius: 0.5em;
+    border-style: solid;
+    border-color: var(--site-link-color);
+    padding: 4px 8px;
+}
+input[type="submit"] {
+    font-weight: bold;
+    transition: .3s ease;
+}
+#submit:hover{
+    color: var(--hover-link-color)
+}
+
+.dividing-line{
+    background-color: #dcdcdc;
+    height: var(--border-size);
+    padding: 0;
+    margin: 0;
+}
+div.book-list-container > h2{
+    text-decoration: underline;
+    color: var(--hover-link-color);
+    color: var(--site-link-color);
+
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}

@@ -82,6 +82,8 @@ form.book-form{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: var(--gap-size);
+    width: 50%;
+    align-self: center;
 
     padding: 2em;
     border: solid var(--site-text-color);
@@ -91,6 +93,9 @@ form.book-form{
 .read-submit-container{
     display: grid;
     grid-template-columns: .5fr 1fr;
+    justify-self: center;
+    align-self: flex-end;
+    gap: var(--gap-size);
 }
 .read-container{
     display: flex;

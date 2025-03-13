@@ -47,7 +47,7 @@
                 </div>
                 <div class="submit-container">
                     <!-- <label for="">Submit:</label><br> -->
-                    <input id="submit" name="submit-container" type="submit" value="Add Book">
+                    <input id="submit" name="submit" type="submit" value="Add Book">
                 </div>
             </div>
           </form> 
@@ -58,9 +58,24 @@
             <h2>Book List</h2>
             <br>
             <div class="book-item">
-                <h3 class="book-title">The Davinci Davinki</h3>
-                <h3 class="book-author">Laura Pomela</h3>
-                <p class="book-pages">356 <span>pages</span></p>
+                <div class="book-info-container">
+                    <h3 class="book-title">The Davinci Davinki</h3>
+                    <h3 class="book-author">Laura Pomela</h3>
+                    <p class="book-pages">356&nbsp;<span>pages</span></p>    
+                </div>
+                <div class="book-btn-container">
+                    <button id="fav-book-btn">
+                        <img class="filter-yellow" src="img/star_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Favorite book button">
+                    </button>
+                    &nbsp;&nbsp;
+                    <button id="delete-book-btn">
+                        <img class="filter-black" src="img/delete_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Delete book button">
+                    </button>
+                    &nbsp;&nbsp;
+                    <input type="checkbox" name="read-book-list" id="read-book-list">
+                    &nbsp;
+                    <label for="read-book-list">read</label>
+                </div>
             </div>
           </div>
     </main>

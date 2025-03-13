@@ -64,7 +64,11 @@ header nav h2 span{
 }
 
 main{
-    padding: var(--gap-size);
+    /* padding: var(--gap-size); */
+    width: min(100ch, 100% - 1rem);
+    /* margin-right: auto;
+    margin-left: auto; */
+    margin: 1.5em auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,20 +90,24 @@ form.book-form input:focus{
 form.book-form{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: fit-content(8ch) fit-content(8ch);
+    justify-content: center;
     gap: var(--gap-size);
     width: 50%;
+    width: min(60ch, 100vw - 2rem); /* GOATED 🔥🔥🔥 https://moderncss.dev/practical-uses-of-css-math-functions-calc-clamp-min-max/ */
     /* align-self: center; */
 
-    padding: 2em;
-    border: solid var(--site-text-color);
+    padding: 2em 0;
+    border-width: 8px;
+    border: solid ;
     border-radius: 0.5em;
     font-size: 18px; 
+    font-size: clamp(1rem, 4vw + .5rem, 1rem);  /* GOATED 🔥🔥🔥 https://moderncss.dev/practical-uses-of-css-math-functions-calc-clamp-min-max/ */
 }
 .read-submit-container{
     display: grid;
     grid-template-columns: .5fr 1fr;
-    justify-self: center;
+    /* justify-self: center; */
     align-self: flex-end;
     gap: var(--gap-size);
 }
@@ -133,8 +141,8 @@ input[type="submit"] {
 .dividing-line{
     background-color: #dcdcdc;
     height: var(--border-size);
-    padding: 0;
     margin: 0;
+    align-self: stretch;
 }
 div.book-list-container {
     text-align: center;

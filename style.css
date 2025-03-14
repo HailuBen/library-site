@@ -75,17 +75,20 @@ main{
     gap: var(--gap-size);
     flex-direction: column;
 }
-form.book-form input{
+form.book-form input, #submit{
     background-color: var(--site-text-color);
-    transition: .3s ease;
+    transition: .2s ease;
 }
-form.book-form input:hover{
+form.book-form input:hover, #submit:hover{
     box-shadow: 0px 0px 5px 2px var(--site-link-color);
     background-color: white;
 }
 form.book-form input:focus{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    background-color: white;
+    box-shadow: 0px 0px 5px 2px #20202040, 0 10px 10px #20202040;
+}
+#submit:active{
+    box-shadow: 0px 0px 5px 2px #20202040, 0 10px 10px #20202040;
+    background-color: var(--site-text-color);
 }
 form.book-form{
     display: grid;
@@ -124,13 +127,15 @@ form.book-form{
 input[type="checkbox"]{
     transform: scale(1.5);
 }
-
-form > div > input, .submit-container input[type="submit"]{
+button#submit{
+    cursor: pointer;
+}
+form > div > input, .submit-container input[type="submit"], button#submit{
     border-style: solid;
     border-color: var(--site-link-color);
     padding: 4px 8px;
 }
-input[type="submit"] {
+input[type="submit"], button#submit {
     font-weight: bold;
     transition: .3s ease;
 }

@@ -22,16 +22,16 @@
     </header>
     <!-- Library main content -->
     <main>
-        <form class="book-form" action="">
+        <form class="book-form" action="" name="bookForm">
             <!-- <h2 class="add-book-heading">Add Book</h2> -->
 
             <!-- 1 --><div class="title-container">
-                <label for="book">Book title:</label><br>
+                <label for="book">Title:</label><br>
                 <input placeholder="e.g. Lord of the Rings" id="book" name="book" value="">
             </div>
 
             <!-- 2 --><div class="author-container">
-                <label for="author">Author name:</label><br>
+                <label for="author">Author:</label><br>
                 <input placeholder="e.g. Albert Camus" type="text" id="author" name="author" value="">
             </div>
 
@@ -47,7 +47,7 @@
                 </div>
                 <div class="submit-container">
                     <!-- <label for="">Submit:</label><br> -->
-                    <input id="submit" name="submit" type="submit" value="Add Book">
+                    <button type="button" id="submit">Add Book</button>
                 </div>
             </div>
           </form> 
@@ -65,11 +65,11 @@
                 </div>
                 <div class="book-btn-container">
                     <button id="fav-book-btn">
-                        <img class="filter-yellow" src="img/star_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Favorite book button">
+                        <img class="filter-yellow" src="img/star_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Favorite book from book list button">
                     </button>
                     &nbsp;&nbsp;
                     <button id="delete-book-btn">
-                        <img class="filter-black" src="img/delete_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Delete book button">
+                        <img class="filter-black" src="img/delete_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Delete book from book list button">
                     </button>
                     &nbsp;&nbsp;
                     <input type="checkbox" name="read-book-list" id="read-book-list">

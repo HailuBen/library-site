@@ -19,10 +19,10 @@ html,body{height: 100%; margin: 0;}
     /* Palette */
     --site-bg-color: #3c3c3c;
     --site-text-color: #dcdcdc;
-    --site-link-color: #117cff;
-    /* --site-link-color: #3773FF; */
+    /* --site-link-color: #938bb7; */
+    --site-link-color: #3773FF;
     --site-visited-color: #b377f2;
-    --hover-link-color: #ffc636;
+    --hover-link-color: #4e4fbc;
     --gap-size: 1.5em;
     --border-size: 4px;
 }
@@ -43,11 +43,77 @@ button, input{
     border-radius: 0.5em;
 }
 
+.top-half-container{
+    /* display: flex; */
+}
+
+.addbook-container{
+    text-align: center;
+}
+
+.dropdown{
+    transition: all 1s ease-in;
+    text-align: center;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
+}
+.palette-icon {
+    width: 40%;
+    height: auto;
+}
+.theme-icon{
+    width: 40%;
+    height: auto;
+}
+.drop-btn{
+    background-color: none;
+    transition: 0.3s;
+    color: white;
+    font-size: 18px; 
+    font-size: clamp(1rem, 4vw + .5rem, 1rem);
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.content{
+    border-radius: 0.5em;
+}
+.content a {
+    display: flex;
+
+}
+.dropdown .content{
+    display: none;
+    position: absolute;
+    margin-top: 2em;
+    box-shadow: 2px 2px 5px #3c3c3c;
+    transition: all 1s ease-in;
+}
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown button {
+    cursor: pointer;
+}
+.dropdown a {
+    display: block;
+    text-decoration: none;
+    padding: 2px 4px;
+}
+.drop-btn{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
 body{
     background-color: var(--site-bg-color);
     color: var(--site-text-color);
     /* font-family: "Ponomar", system-ui; */
     font-family: "Roboto Slab", serif;
+    background-image: url(img/Simple_Shiny_BG.svg);
+    
 }
 header{
     display: flex;
@@ -57,10 +123,21 @@ header{
     color: white;
     justify-content: center;
     align-items: center;
+
+    background: #938BB7;
+        background: -webkit-linear-gradient(90deg, rgba(147, 139, 183, 1) 0%, rgba(179, 119, 242, 1) 38%, rgba(55, 115, 255, 1) 100%);
+        background: -moz-linear-gradient(90deg, rgba(147, 139, 183, 1) 0%, rgba(179, 119, 242, 1) 38%, rgba(55, 115, 255, 1) 100%);
+        background: linear-gradient(90deg, rgba(147, 139, 183, 1) 0%, rgba(179, 119, 242, 1) 38%, rgba(55, 115, 255, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#938BB7", endColorstr="#3773FF", GradientType=1);
+        
+    /* padding: 0 50px 0 5px; */
+    letter-spacing: 2px;
 }
 
 header nav h2 span{
-    color: var(--hover-link-color);
+    color: var(--site-link-color);
+    filter: drop-shadow(5px 5px 10px #ffffff);
+    /* margin: 0 40px 0 40px; */
 }
 
 main{
@@ -110,7 +187,7 @@ form.book-form{
 .read-submit-container{
     display: grid;
     grid-template-columns: .5fr 1fr;
-    /* justify-self: center; */
+    justify-self: center;
     align-self: flex-end;
     gap: var(--gap-size);
 }
@@ -148,9 +225,12 @@ input[type="submit"], button#submit {
     height: var(--border-size);
     margin: 0;
     align-self: stretch;
+    margin: 2em 0 2em 0;
 }
 div.book-list-container {
     text-align: center;
+    display: flex;
+    gap: var(--gap-size);
 }
 .book-item{
     text-align: initial;
@@ -158,10 +238,12 @@ div.book-list-container {
     border-radius: 0.5em;
     padding: var(--gap-size);
 }
-div.book-list-container > h2{
+.book-list-h2{
+    text-align: center;
     text-decoration: underline;
     color: var(--hover-link-color);
     color: var(--site-link-color);
+    padding-bottom: 1em;
 }
 .book-info-container{
     padding-bottom: .5rem;

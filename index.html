@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ponomar&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ponomar&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
     <title>Library</title>
 </head>
+
 <body>
     <!--  -->
     <header>
@@ -22,54 +25,107 @@
     </header>
     <!-- Library main content -->
     <main>
-        <form class="book-form" action="" name="bookForm">
-            <!-- <h2 class="add-book-heading">Add Book</h2> -->
-
-            <!-- 1 --><div class="title-container">
-                <label for="book">Title:</label><br>
-                <input placeholder="e.g. Lord of the Rings" id="book" name="book" value="">
+        <div class="top-half-container">
+            <div class="addbook-container">
+                <h2 class="book-list-h2">Add book</h2>
+                <form class="book-form" action="" name="bookForm">
+                    <!-- <h2 class="add-book-heading">Add Book</h2> -->
+                    <!-- 1 -->
+                    <div class="title-container">
+                        <label for="book">Title:</label><br>
+                        <input placeholder="e.g. Lord of the Rings" id="book" name="book" value="">
+                    </div>
+                    <!-- 2 -->
+                    <div class="author-container">
+                        <label for="author">Author:</label><br>
+                        <input placeholder="e.g. Albert Camus" type="text" id="author" name="author" value="">
+                    </div>
+                    <!-- 3 -->
+                    <div class="pages-container">
+                        <label for="pages">Pages:</label><br>
+                        <input min="0" placeholder="e.g. 5123" type="number" id="pages" name="pages" value="">
+                    </div>
+                    <!-- 4 -->
+                    <div class="read-submit-container">
+                        <div class="read-container">
+                            <input type="checkbox" id="read" name="read" value="">
+                            <label for="read">Read?</label>
+                        </div>
+                        <div class="submit-container">
+                            <!-- <label for="">Submit:</label><br> -->
+                            <button type="button" id="submit">Add Book</button>
+                        </div>
+                    </div>
+                </form>
             </div>
 
-            <!-- 2 --><div class="author-container">
-                <label for="author">Author:</label><br>
-                <input placeholder="e.g. Albert Camus" type="text" id="author" name="author" value="">
-            </div>
-
-            <!-- 3 --><div class="pages-container">
-                <label for="pages">Pages:</label><br>
-                <input min="0" placeholder="e.g. 5123" type="number" id="pages" name="pages" value="">
-            </div>
-
-            <!-- 4 --><div class="read-submit-container">
-                <div class="read-container">
-                    <input type="checkbox" id="read" name="read" value="">
-                    <label for="read">Read?</label>
+            <!-- background colour theme switching dropdown menu -->
+            <!-- <div class="dropdown">
+                <a class="drop-btn">
+                    <img class="palette-icon" src="img/icons8-rgb-color-wheel-64.png"
+                        alt="A color palette icon for switching background colour">
+                    <b>Change Theme</b>
+                </a>
+                <div class="content">
+                    <a class="content-a" href="">
+                        <small>1</small>
+                        <img class="theme-icon" src="img/icons8-moon-64.png" alt="A gray moon icon">
+                    </a>
+                    <a class="content-a" href="">
+                        <small>2</small>
+                        <img class="theme-icon" src="img/icons8-blue-64.png" alt="A navy diamond icon">
+                    </a>
+                    <a class="content-a" href="">
+                        <small>3</small>
+                        <img class="theme-icon" src="img/icons8-flower-64.png" alt="A lilac flower icon">
+                    </a>
                 </div>
-                <div class="submit-container">
-                    <!-- <label for="">Submit:</label><br> -->
-                    <button type="button" id="submit">Add Book</button>
-                </div>
             </div>
-          </form> 
+        </div> -->
+        <div class="dividing-line"></div>
 
-          <div class="dividing-line"></div>
+        <h2 class="book-list-h2">Book List</h2>
 
-          <div class="book-list-container">
-            <h2>Book List</h2>
+        <div class="book-list-container">
             <br>
-            <div class="book-item">
+            <div id="book-item" class="book-item">
                 <div class="book-info-container">
-                    <h3 class="book-title">The Davinci Davinki</h3>
-                    <h3 class="book-author">Laura Pomela</h3>
-                    <p class="book-pages">356&nbsp;<span>pages</span></p>    
+                    <h3 id="bl-title" class="book-title">The Davinci Davinki</h3>
+                    <h3 id="bl-author" class="book-author">Laura Pomela</h3>
+                    <p id="bl-pages" class="book-pages">356&nbsp;<span>pages</span></p>
+                </div>
+                <div class="book-btn-container">
+                    <button class="fav-book-btn">
+                        <img class="filter-yellow" src="img/star_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="Favorite book from book list button">
+                    </button>
+                    &nbsp;&nbsp;
+                    <button type="button" class="delete-book-btn">
+                        <img class="filter-black" src="img/delete_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="Delete book from book list button">
+                    </button>
+                    &nbsp;&nbsp;
+                    <input type="checkbox" name="bl-read" id="bl-read">
+                    &nbsp;
+                    <label for="bl-read">read</label>
+                </div>
+            </div>
+
+            <div id="book-item" class="book-item">
+                <div class="book-info-container">
+                    <h3 id="bl-title" class="book-title">The Davinci Davinki</h3>
+                    <h3 id="bl-author" class="book-author">Laura Pomela</h3>
+                    <p id="bl-pages" class="book-pages">356&nbsp;<span>pages</span></p>
                 </div>
                 <div class="book-btn-container">
                     <button id="fav-book-btn">
-                        <img class="filter-yellow" src="img/star_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Favorite book from book list button">
+                        <img class="filter-yellow" src="img/star_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="Favorite book from book list button">
                     </button>
                     &nbsp;&nbsp;
                     <button id="delete-book-btn">
-                        <img class="filter-black" src="img/delete_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Delete book from book list button">
+                        <img class="filter-black" src="img/delete_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="Delete book from book list button">
                     </button>
                     &nbsp;&nbsp;
                     <input type="checkbox" name="read-book-list" id="read-book-list">
@@ -77,11 +133,14 @@
                     <label for="read-book-list">read</label>
                 </div>
             </div>
-          </div>
+
+        </div>
     </main>
-<!--  -->
+    <!--  -->
     <footer>
-        &copy; 2025 by&nbsp;<b><a class="b-footer-b" href="https://github.com/HailuBen/library-site" target="_blank" rel="noopener noreferrer">HailuBen</a></b> 
+        &copy; 2025 by&nbsp;<b><a class="b-footer-b" href="https://github.com/HailuBen/library-site" target="_blank"
+                rel="noopener noreferrer">HailuBen</a></b>
     </footer>
 </body>
+
 </html>

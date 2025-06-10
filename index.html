@@ -33,12 +33,12 @@
                     <!-- 1 -->
                     <div class="title-container">
                         <label for="title">Title:</label><br>
-                        <input placeholder="e.g. Lord of the Rings" id="title" name="title" value="">
+                        <input placeholder="e.g. Lord of the Rings" id="title" name="title" value="" required>
                     </div>
                     <!-- 2 -->
                     <div class="author-container">
                         <label for="author">Author:</label><br>
-                        <input placeholder="e.g. Albert Camus" type="text" id="author" name="author" value="">
+                        <input placeholder="e.g. Albert Camus" type="text" id="author" name="author" value="" required>
                     </div>
                     <!-- 3 -->
                     <div class="pages-container">
@@ -95,14 +95,14 @@
                     <p id="bl-pages" class="book-pages">356&nbsp;<span>pages</span></p>
                 </div>
                 <div class="book-btn-container">
-                    <button class="fav-book-btn">
+                    <button type="button" class="fav-book-btn">
                         <img class="filter-yellow" src="img/star_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-                            alt="Favorite book from book list button">
+                            alt="Star shaped button to set book from book list as favourite.">
                     </button>
                     &nbsp;&nbsp;
                     <button type="button" class="delete-book-btn">
-                        <img class="filter-black" src="img/delete_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
-                            alt="Delete book from book list button">
+                        <img class="filter-red" src="img/delete_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                            alt="Trash can shaped button to remove book from book list.">
                     </button>
                     &nbsp;&nbsp;
                     <input type="checkbox" name="bl-read" id="bl-read">
@@ -118,13 +118,13 @@
                     <p id="bl-pages" class="book-pages">356&nbsp;<span>pages</span></p>
                 </div>
                 <div class="book-btn-container">
-                    <button id="fav-book-btn">
+                    <button type="button" id="fav-book-btn">
                         <img class="filter-yellow" src="img/star_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
                             alt="Favorite book from book list button">
                     </button>
                     &nbsp;&nbsp;
-                    <button id="delete-book-btn">
-                        <img class="filter-black" src="img/delete_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                    <button type="button" id="delete-book-btn">
+                        <img class="filter-red" src="img/delete_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
                             alt="Delete book from book list button">
                     </button>
                     &nbsp;&nbsp;

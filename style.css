@@ -252,7 +252,7 @@ div.book-list-container {
     filter: invert(0%) sepia(8%) saturate(7483%) hue-rotate(342deg) brightness(81%) contrast(97%);
     color: #cc9c14;
 }
-.filter-black{
+.filter-red{
     filter: brightness(0) saturate(100%) invert(26%) sepia(98%) saturate(6797%) hue-rotate(356deg) brightness(103%) contrast(118%);
     color: #ff0000;
 }

@@ -7,15 +7,6 @@ const bookItemDiv = document.getElementById('book-item');
 
 const bookListArr = []; 
 
-addBookButton.addEventListener('click', function(){
-    console.log("hi! You clicked Add Book");
-
-    validateBookForm();
-    displayBook();
-    console.log();
-
-})
-
 function Book(title, author, pages, read, bookId) {
     if (!new.target) {
         throw Error("WARNING: 'new' operator NOT USED to call the constructor!");
@@ -33,12 +24,22 @@ function Book(title, author, pages, read, bookId) {
         } else{
             readCheck = 'Have read,'
         }
-        
         return this.title+', '+this.author+', '+this.pages+' pages, '+readCheck+' ID: '+this.bookId;
         //console.log(` ${this.title}' by '${this.author}', '${this.pages}' pages, '${readCheck} `);
-
     }
 }
+
+console.log()
+
+addBookButton.addEventListener('click', function(){
+    console.log("hi! You clicked Add Book");
+
+    validateBookForm();
+    addBookToArray();
+    displayBook();
+    // console.log();
+
+})
 
 function validateBookForm(){
     // Check if input fields are empty & warn
@@ -49,21 +50,24 @@ function validateBookForm(){
     } else {
         console.log("ur valid type sh hahaaa");
     }
-    if (bookListArr.length >= 10) {
-        alert("You can only add up to 10 books.");
-        return;
-    }
 }
 
 function addBookToArray(book) {
-    for (let i = 0; i < bookListArr.length; i++) {
-        if (!bookListArr[i]) { // Check for empty slot
-            bookListArr[i] = book; // Add the book object
-            console.log(`Book added at index ${i}`);
-            return;
-        }
+    // for (let i = 0; i < bookListArr.length; i++) {
+    //     if (!bookListArr[i]) { // Check for empty slot
+    //         bookListArr[i] = book; // Add the book object
+    //         console.log(`Book added at index ${i}`);
+    //         return;
+    //     }
+    // }
+    // console.log('The book list is full! Unable to add the book.');
+
+    //(ran after add book btn clicked)
+    //put the input field values from title, author, pages, and read into new book object
+    //add that new book object to an array
+    if (bookListArr.length >= 10) {
+        alert("You can only add up to 10 books.");
     }
-    console.log('The book list is full! Unable to add the book.');
 }
 
 function displayBook(book){
@@ -110,8 +114,6 @@ function displayBook(book){
     delBookBtn.setAttribute("Trash can shaped button to remove book from book list.");
     favBtnImg.classList.add('filter-yellow');
     delBtnImg.classList.add('filter-red');
-
-
 }
 
 
